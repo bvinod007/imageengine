@@ -1,4 +1,4 @@
-name: "build the package when a pull request is opened to branch"
+name: "build the package when a pull request is opened"
 
 on:
     pull_request:
