@@ -1,11 +1,11 @@
-name: "build the package when pushing to branch"
+name: "build the package when a pull request is opened to branch"
 
 on:
     pull_request:
       types: 
         - opened
       branches: 
-            - 'main'
+        - 'main'
     
 
 jobs:
