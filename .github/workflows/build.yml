@@ -1,8 +1,12 @@
 name: "build the package when pushing to branch"
 
 on:
-    push:
-      branches: ["main"]
+    pull_request:
+      types: 
+        - opened
+      branches: 
+            - 'main'
+    
 
 jobs:
     build:
