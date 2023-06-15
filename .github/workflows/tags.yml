@@ -27,4 +27,7 @@ jobs:
           - run: npm publish --access public
             env:
               NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
-          - run: npm run release
+          - name: prepare release
+            env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            run: npm run release
