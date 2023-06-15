@@ -17,10 +17,6 @@ jobs:
             with:
               node-version: '16.x'
               registry-url: 'https://registry.npmjs.org'
-          - run: npm install
-          - run: npm publish --access public
-            env:
-              NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
           - run: npm ci
           - run: npm build
           - name: git config
@@ -28,5 +24,7 @@ jobs:
                 git config --global user.name "Vinod Kumar B"
                 git config --global user.email "vbainapalli@loginsoft.com"
           - run: npm version major
-          - run: npm publish
+          - run: npm publish --access public
+            env:
+              NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
           - run: npm run release
