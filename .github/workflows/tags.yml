@@ -30,4 +30,5 @@ jobs:
           - name: prepare release
             env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH }}
             run: npm run release
