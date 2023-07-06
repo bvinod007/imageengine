@@ -31,6 +31,6 @@
   "homepage": "https://github.com/imgeng/imageengine-react#readme",
   "dependencies": {
     "@imageengine/imageengine-helpers": "^0.1.1",
-    "release-it": "^15.11.0"
+    "release-it": "^16.0.0"
   }
 }
